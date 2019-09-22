@@ -29,6 +29,10 @@ class freeimageConan(ConanFile):
         self.copy("*.dll", dst="bin", src="FreeImage/Dist", keep_path=False)
         self.copy("*.so", dst="lib", src="FreeImage/Dist", keep_path=False)
         self.copy("*.a", dst="lib", src="FreeImage/Dist", keep_path=False)
+        self.copy("*.lib", dst="lib", src="FreeImage/Source", keep_path=False)
+        self.copy("*.dll", dst="bin", src="FreeImage/Source", keep_path=False)
+        self.copy("*.so", dst="lib", src="FreeImage/Source", keep_path=False)
+        self.copy("*.a", dst="lib", src="FreeImage/Source", keep_path=False)
 
     def package_info(self):
         self.cpp_info.libs = tools.collect_libs(self)
