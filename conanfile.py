@@ -24,7 +24,7 @@ class freeimageConan(ConanFile):
                 autotools.make()
 
     def package(self):
-        self.copy("*.h", dst="include", src="FreeImage/Dist")
+        self.copy("*.h", dst="include", src="FreeImage/Dist", keep_path=False)
         self.copy("*.lib", dst="lib", src="FreeImage/Dist", keep_path=False)
         self.copy("*.dll", dst="bin", src="FreeImage/Dist", keep_path=False)
         self.copy("*.so", dst="lib", src="FreeImage/Dist", keep_path=False)
