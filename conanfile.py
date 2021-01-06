@@ -10,7 +10,6 @@ class freeimageConan(ConanFile):
     url = "https://github.com/AnotherFoxGuy/conan-freeimage"
     description = "FreeImage is an Open Source library project for developers who would like to support popular graphics image formats like PNG, BMP, JPEG, TIFF and others as needed by today's multimedia applications."
     settings = "os", "compiler", "build_type", "arch"
-    short_paths = True
 
     def source(self):
         tools.get("http://downloads.sourceforge.net/freeimage/FreeImage3180.zip")
